@@ -19,16 +19,18 @@ that allows tracking match results for players, and decks. It scraps website to 
 Login Window
 ![Login Window](GameNetWork/docs/login.jpg)
 
-<br />
-Main window of the app
+
+<br/>Main window of the app
 ![Main window](GameNetWork/docs/main.jpg)
 
-<br />
-Window with adding and editing decks
+
+
+<br/>Window with adding and editing decks
 ![Decks](GameNetWork/docs/decks.jpg)
 
-<br />
-Window with stats of players
+
+
+<br/>Window with stats of players
 ![Stats](GameNetWork/docs/stats.jpg)
 
 
