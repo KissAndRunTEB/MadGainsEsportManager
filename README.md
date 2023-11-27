@@ -47,6 +47,7 @@ Clone the project.
 
 Have .NET 8 installed.
 
+Run from Visual Studio 2022 or above.
 
 ## Usefull links
 
