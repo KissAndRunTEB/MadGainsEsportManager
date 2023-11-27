@@ -16,7 +16,9 @@ that allows tracking match results for players, and decks. It scraps website to 
 
 
 ## Screenshots
-Login Window
+
+
+<br/>Login Window
 ![Login Window](GameNetWork/docs/login.jpg)
 
 
