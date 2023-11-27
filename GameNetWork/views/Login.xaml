@@ -1,0 +1,62 @@
+﻿<Window x:Class="MadGains.views.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MadGains.views"
+        mc:Ignorable="d"
+        Title="Login" Height="400" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <Label Content="Your nick"  Width="160" Margin="0,0,20,0"/>
+            <Label Content="Your password"  Width="160" Margin="0,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <TextBox x:Name="nickField" HorizontalAlignment="Left" Height="40" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Margin="0,0,20,0"/>
+        <TextBox x:Name="passwordField" HorizontalAlignment="Left" Height="40" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" /> 
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+                  <Button x:Name="buttonLoging" Content="Login" HorizontalAlignment="Center" Height="32"  VerticalAlignment="Top" Width="168" Click="Button_Click"/>
+
+        <Label x:Name="error" Content="..." HorizontalAlignment="Center" Height="36"  VerticalAlignment="Top" Width="780" HorizontalContentAlignment="Center"/>  
+
+            <TextBlock HorizontalAlignment="Center" Height="28"  VerticalAlignment="Top">
+            <TextBlock.Inlines>
+                    <Run FontSize="14" Text="By loging in you accept current version of " />
+                    <Run x:Name="hhh" FontWeight="Bold"  Text="ruleset" MouseDown="hhh_MouseDown" />
+            </TextBlock.Inlines>
+            </TextBlock>
+            
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" VerticalAlignment="Center">                  
+        <Label Content="TOP SECRET EXTREMLY EARLY VERSION" Height="24" FontWeight="Bold" Foreground="Red" HorizontalAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+                
+            <Label Content="Version " Height="28"/>
+            <Label x:Name="versionField" Content="0.0" Height="28"/>
+                
+            </StackPanel>
+            
+        </StackPanel>
+        <Image Grid.Row="0" Stretch="Uniform" Source="/Content/Images/Mad Gains Logo.png" />
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                <CheckBox x:Name="autostartField" Content="Autostart at windows start"  Height="22" Width="180" Margin="0,0,20,0"/>
+        <CheckBox x:Name="autologinField" Content="Autologin"  Height="22"  Width="80"/>
+            <CheckBox x:Name="minimiseField" Content="Minimise"  Height="22"  Width="80"/>
+
+        </StackPanel>
+   
+
+    </Grid>
+</Window>

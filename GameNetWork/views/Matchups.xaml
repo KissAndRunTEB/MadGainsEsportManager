@@ -1,0 +1,68 @@
+﻿<Window x:Class="MadGains.views.Matchups"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MadGains.views"
+        mc:Ignorable="d"
+        Title="Matchups" Height="450" Width="800">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="7*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Column ="0">
+                <Label Content="All matchups, select to delete or edit."/>
+                <ListBox x:Name="list_matchups" SelectionChanged="list_matchups_SelectionChanged" Height="400">
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0,2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="5*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding IdDeckA}" Margin="0,0,20,0" />
+                                <TextBlock Grid.Column="1" Text="{Binding IdDeckB}" Margin="0,0,20,0"/>
+                                <TextBlock Grid.Column="2" Text="{Binding Description}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+
+                </ListBox>
+                <Button x:Name="buttonDeleteMatchup" Content="Delete" IsEnabled="False" Height="44" Width="248" Click="buttonDeleteMatchup_Click"/>
+            </StackPanel>
+            <StackPanel Grid.Column ="1">
+                <Label Content="Adding matchup..."/>
+                <Label Content="DeckA"/>
+                <TextBox x:Name="idOfDeckA" Height="30" Text="Id of player" TextWrapping="Wrap" Width="429"/>
+
+                <Label Content="DeckB"/>
+                <TextBox x:Name="idOfDeckB" Height="30" Text="Name of opponent" TextWrapping="Wrap" Width="429"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <Button x:Name="buttonAddNewMatchup" Content="Add new matchup" Click="Button_Click_1" Margin="0,0,20,0"/>
+                    <Button x:Name="buttonEditMatchup" Content="Save changes" IsEnabled="False" Margin="0,0,20,0" Click="buttonEditMatchup_Click"/>
+                    <Button x:Name="buttonBackToNew" Content="Back to adding new" IsEnabled="False" Click="buttonBackToNew_Click"/>
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row ="1" Grid.ColumnSpan="2">
+
+                <Button Content="Close" HorizontalAlignment="Center" Height="56"  VerticalAlignment="Top" Width="240" Click="Button_Click"/>
+
+            </StackPanel>
+
+
+        </Grid>
+    </Grid>
+</Window>
