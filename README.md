@@ -3,8 +3,8 @@
 
 ## Description
 
-Mad Gains (C#, .NET, WPF, threads, libraries for scraping) is Esport Manager (currently setup for game Gwent),
-that allows tracking match results for players, and decks. It scraps website to get current results of team players.
+Mad Gains Esport Manager (C#, .NET, WPF, threads, libraries for scraping) allows tracking match results for players and decks.
+It scraps the website to get the current results of team players (currently set up for the game Gwent).
 
 ## Features
 
